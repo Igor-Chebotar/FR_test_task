@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>
+            <center>Время</center>
+        </th>
+        <th>
+            <center>Id рассылки</center>
+        </th>
+
+        <th>
+            <center>Id клиента</center>
+        </th>
+        <th>
+            <center>Доставлено</center>
+        </th>
+
+    </tr>
+    {% for message in messages%}
+    <tr>
+        <td><time>{{message.datetime}}</time></td>
+        <td><a>{{message.distribution_id}}</a></td>
+        <td><a>{{message.client_id}}</a></td>
+        <td><a>{{message.sent}}</a></td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+</body>
+</html>

@@ -4,7 +4,7 @@ from .models import Tag, Client, Distribution, Message
 
 @admin.register(Tag)
 class TagAdmin(admin.ModelAdmin):
-    list_display = ['title']
+    list_display = ['id', 'title']
 
 
 @admin.register(Client)
@@ -15,12 +15,12 @@ class ClientAdmin(admin.ModelAdmin):
 
 @admin.register(Distribution)
 class DistributionAdmin(admin.ModelAdmin):
-    list_display = ['operator_code']
+    list_display = ['id', 'operator_code']
     list_filter = ['operator_code', 'tag', 'datetime_start', 'datetime_finish']
 
 
 @admin.register(Message)
 class MessageAdmin(admin.ModelAdmin):
-    list_display = ['distribution_id', 'client_id', 'datetime', 'sent']
+    list_display = ['id', 'distribution_id', 'client_id', 'datetime', 'sent']
     list_filter = ['sent', 'distribution_id', 'client_id']
 
