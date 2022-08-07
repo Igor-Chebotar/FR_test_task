@@ -1,7 +1,7 @@
 from django.urls import path
 from rest_framework.routers import SimpleRouter
 
-from .views import TagViewsSet, MainView, ClientViewsSet, DistributionViewsSet, MessageViewsSet, \
+from .views import TagViewsSet, ClientViewsSet, DistributionViewsSet, MessageViewsSet, \
     DistributionGetMessagesView
 
 router = SimpleRouter()
